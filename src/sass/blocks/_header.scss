@@ -153,6 +153,7 @@
     }
 }
 
+// эффект next click
 .carousel.next {
     & .carousel__item:nth-child(1) {
         img {
@@ -175,8 +176,57 @@
     }
 }
 
+// эффект prev click
+.carousel.prev {
+    & .carousel__item:nth-child(2) {
+        z-index: 2;
+        & img {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            animation: outImage .5s linear 1 forwards;
+        }
+    }
+    & .carousel__thumbnail-item:nth-child(1) {
+        width: 0;
+        overflow: hidden;
+        opacity: 0;
+        animation: showThumbnailFirst .5s linear 1 forwards;
+    }
+    & .carousel__item:nth-child(2) {
+        & .carousel__title,
+        & .carousel__date,
+        & .carousel__descr,
+        & .carousel__btns {
+            animation: contentOut 1.5s linear 1 forwards;
+        }
+    }
+}
 
+// запрет клика на кнопках при активных классах next и prev
+.carousel.next .carousel__arrows button,
+.carousel.prev .carousel__arrows button {
+    pointer-events: none;
+}
 
+// плоса времени действия анимации переключения слайда
+.carousel__time {
+    width: 0;
+    height: 5px;
+    background: var(--orange);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.carousel.next .carousel__time,
+.carousel.prev .carousel__time {
+    width: 100%;
+    animation: timeRuning 2s linear 1 forwards;
+}
+
+// animation
 @keyframes showContent {
     to {
         opacity: 1;
@@ -197,8 +247,34 @@
         width: 211px;
     }
 }
+@keyframes showThumbnailFirst {
+    to {
+        width: 269px;
+    }
+}
 @keyframes transformThumbnail {
     to {
        transform: translateX(0);
+    }
+}
+@keyframes outImage {
+    to {
+        width: 269px;
+        height: 267px;
+        left: 50%;
+        bottom: 107px;
+    }
+}
+@keyframes contentOut {
+    to {
+        transform: translateY(-150px);
+        filter: blur(20px);
+        opacity: 0;
+    }
+}
+
+@keyframes timeRuning {
+    to {
+        width: 0;
     }
 }
