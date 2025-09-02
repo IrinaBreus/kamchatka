@@ -1,0 +1,204 @@
+.header {
+    width: 100%;
+    position: relative;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 833px;
+    overflow: hidden;
+    &__item {
+        position: absolute;
+        inset: 0 0 0 0;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        &:nth-child(1) {
+            z-index: 1;    
+            & .carousel__title, 
+            & .carousel__date,
+            & .carousel__descr, 
+            & .carousel__btns {
+                transform: translateY(50px);
+                filter:blur(20px);
+                opacity: 0;
+                animation: showContent .5s 1s linear 1 forwards;
+            }
+            & .carousel__title {
+                animation-delay: 1.2s;
+            } 
+            & .carousel__date {
+                animation-delay: 1.4s;
+            }
+            & .carousel__descr {
+                animation-delay: 1.6s;
+            } 
+            & .carousel__btns {
+                animation-delay: 1.8s;
+            }
+        }
+        
+    }
+    &__content {
+        position: absolute;
+        width: 50%;
+        top: 163px;
+    }
+    &__title {
+        width: 624px;
+        font-family: var(--font-inter);
+        font-weight: 900;
+        font-size: 64px;
+        line-height: 100%;
+        color: #fff;
+        margin-bottom: 25px;
+    }
+    &__date {
+        border-radius: 16px;
+        background:linear-gradient(143deg, #fb8b62 0%, #f47648 100%);
+        font-family: var(--font-mont);
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 187%;
+        color: #fff;
+        padding: 2px 32px;
+        width: max-content;
+        margin-bottom: 40px;
+    }
+    &__descr {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 140%;
+        color: var(--white);
+        width: 52%;
+        margin-bottom: 18px;
+    }
+    &__btns {
+        display: flex;
+        gap: 18px;
+        align-items: center;
+        a {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 133%;
+            text-decoration: underline;
+            color: var(--white);
+        }
+    }
+    &__social {
+        position: absolute;
+        bottom: 107px;
+        left: 12%;
+        display: flex;
+        gap: 24px;
+        z-index: 100;
+    }
+    &__link {
+        display: inline-block;
+        width: 26px;
+        height: 26px;
+        padding: 3px;
+        background: linear-gradient(38deg,rgba(3, 0, 0, 0.5) 100%, rgba(3, 0, 0, 0) 0%);
+        box-shadow: 0px 5px 32px 20px rgba(34, 60, 80, 0.2);
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__thumbnail {
+        position: absolute;
+        bottom: 107px;
+        left: 50%;
+        width: max-content;
+        display: flex;
+        z-index: 100;
+        column-gap: 34px;
+        align-items: center;
+    }
+    &__thumbnail-item {
+        width: 211px;
+        height: 209px;
+        flex-shrink: 0;
+        position: relative;
+        box-shadow: 0 6px 14px 0 rgba(0, 0, 0, 0.25);
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        &:nth-child(1) {
+            width: 269px;
+            height: 267px;
+        }
+    }
+    &__thumbnail-descr {
+        position: absolute;
+        left: 11px;
+        bottom: 12px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 171%;
+        color: var(--white);
+    }
+    &__arrows {
+        position: absolute;
+        bottom: 48px;
+        left: 50%;
+        display: flex;
+        gap: 16px;
+        z-index: 100;
+    }
+}
+
+.carousel.next {
+    & .carousel__item:nth-child(1) {
+        img {
+            width: 269px;
+            height: 267px;
+            position: absolute;
+            left: 50%;
+            bottom: 107px;
+            animation: showImage .5s linear 1 forwards;
+        }
+    }
+    & .carousel__thumbnail-item:nth-last-child(1) {
+        width: 0;
+        overflow: hidden;
+        animation: showThumbnail .5s linear 1 forwards;
+    }
+    & .carousel__thumbnail {
+        transform: translateX(269px);
+        animation: transformThumbnail .5s linear 1 forwards;
+    }
+}
+
+
+
+@keyframes showContent {
+    to {
+        opacity: 1;
+        filter:blur(0);
+        transform: translateY(0);
+    }
+}
+@keyframes showImage {
+    to {
+        width: 100%;
+        height: 100%;
+        left: 0;
+        bottom: 0;
+    }
+}
+@keyframes showThumbnail {
+    to {
+        width: 211px;
+    }
+}
+@keyframes transformThumbnail {
+    to {
+       transform: translateX(0);
+    }
+}

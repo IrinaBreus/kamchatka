@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #212121;
+    font-family: "Lato", sans-serif;;
+}
+
+:root {
+    --black: #212121;
+    --white: #FFFFFF;
+    --green: #275553;
+    --orange: #f47648;
+    --gray:  #5a5a5a;
+    --gray-light: #bababa;
+
+    --font-lato: "Lato", sans-serif;
+    --font-mont: "Montserrat", sans-serif;
+    --font-inter: "Inter", sans-serif;
+    --font-sans: "Open Sans", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+ul, ol[class] {
+    list-style: none;
+}
+
+// для вставки формата webp, если браузер его поддерживает
+// .hero {
+//   background-image: url('bg.jpg');  <!-- Fallback -->
+// }
+
+// @supports (background-image: url('bg.webp')) {
+//   .hero {
+//     background-image: url('bg.webp');  <!-- Оптимизированная версия -->
+//   }
+// }
