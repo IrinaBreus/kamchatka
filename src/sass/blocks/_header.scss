@@ -1,8 +1,17 @@
+@use '/src/sass/libs/animation';
+
 .header {
     width: 100%;
     position: relative;
 }
 
+.carousel.hidden {
+    .carousel__social,
+    .carousel__thumbnail,
+    .carousel__arrows {
+        opacity: 0;
+    }
+}
 .carousel {
     position: relative;
     width: 100%;
@@ -55,6 +64,10 @@
         line-height: 100%;
         color: #fff;
         margin-bottom: 25px;
+        text-shadow: -1px -1px 10px var(--black),
+                    1px -1px 10px var(--black),
+                    -1px 1px 20px var(--black),
+                    1px 1px 10px var(--black);
     }
     &__date {
         border-radius: 16px;
@@ -75,6 +88,10 @@
         color: var(--white);
         width: 52%;
         margin-bottom: 18px;
+        text-shadow: -1px -1px 3px var(--black),
+                    1px -1px 3px var(--black),
+                    -1px 1px 3px var(--black),
+                    1px 1px 3px var(--black);
     }
     &__btns {
         display: flex;
@@ -86,6 +103,10 @@
             line-height: 133%;
             text-decoration: underline;
             color: var(--white);
+            text-shadow: -1px -1px 3px var(--black),
+                    1px -1px 3px var(--black),
+                    -1px 1px 3px var(--black),
+                    1px 1px 3px var(--black);
         }
     }
     &__social {
@@ -226,55 +247,94 @@
     animation: timeRuning 2s linear 1 forwards;
 }
 
-// animation
-@keyframes showContent {
-    to {
-        opacity: 1;
-        filter:blur(0);
-        transform: translateY(0);
-    }
-}
-@keyframes showImage {
-    to {
-        width: 100%;
-        height: 100%;
-        left: 0;
-        bottom: 0;
-    }
-}
-@keyframes showThumbnail {
-    to {
-        width: 211px;
-    }
-}
-@keyframes showThumbnailFirst {
-    to {
-        width: 269px;
-    }
-}
-@keyframes transformThumbnail {
-    to {
-       transform: translateX(0);
-    }
-}
-@keyframes outImage {
-    to {
-        width: 269px;
-        height: 267px;
-        left: 50%;
-        bottom: 107px;
-    }
-}
-@keyframes contentOut {
-    to {
-        transform: translateY(-150px);
-        filter: blur(20px);
-        opacity: 0;
+@media (max-width: 1600px) {
+   .carousel {
+        &__social {
+            bottom: 24px;
+        }
     }
 }
 
-@keyframes timeRuning {
-    to {
-        width: 0;
+@media (max-width: 992px) {
+    .carousel {
+        height: 100vh;
+    &__content {
+        width: 100%;
     }
+    &__date {
+        margin-bottom: 32px;
+    }
+    &__social {
+        position: absolute;
+        bottom: 42px;
+        left: auto;
+        right: 100px;
+        display: flex;
+        gap: 24px;
+        z-index: 100;
+    }
+    &__link {
+        display: inline-block;
+        width: 26px;
+        height: 26px;
+        padding: 3px;
+        background: linear-gradient(38deg,rgba(3, 0, 0, 0.5) 100%, rgba(3, 0, 0, 0) 0%);
+        box-shadow: 0px 5px 32px 20px rgba(34, 60, 80, 0.2);
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__thumbnail {
+        position: absolute;
+        bottom: 107px;
+        left: 50%;
+        width: max-content;
+        display: flex;
+        z-index: 100;
+        column-gap: 34px;
+        align-items: center;
+    }
+    &__thumbnail-item {
+        width: 211px;
+        height: 209px;
+        flex-shrink: 0;
+        position: relative;
+        box-shadow: 0 6px 14px 0 rgba(0, 0, 0, 0.25);
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        &:nth-child(1) {
+            width: 269px;
+            height: 267px;
+        }
+    }
+    &__thumbnail-descr {
+        position: absolute;
+        left: 11px;
+        bottom: 12px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 171%;
+        color: var(--white);
+    }
+    &__arrows {
+        position: absolute;
+        bottom: 48px;
+        left: 50%;
+        display: flex;
+        gap: 16px;
+        z-index: 100;
+    }
+}
+}
+
+@media (max-width: 768px) {
+    
+}
+
+@media (max-width: 576px) {
+    
 }
