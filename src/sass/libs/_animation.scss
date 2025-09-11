@@ -49,3 +49,27 @@
         width: 0;
     }
 }
+
+
+@media (max-width: 992px) {
+   @keyframes outImage {
+        to {
+            width: 269px;
+            height: 267px;
+            left: 11%;
+            bottom: 162px;
+        }
+    }
+}
+
+
+@media (max-width: 576px) {
+    @keyframes outImage {
+        to {
+            width: 269px;
+            height: 267px;
+            left: 5%;
+            bottom: 157px;
+        }
+    }
+}

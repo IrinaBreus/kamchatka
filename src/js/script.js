@@ -4,6 +4,7 @@ import '/src/sass/style.scss'
 // import scrollUp from './modules/scrollUp';
 import headerCarousel from './modules/header-carousel';
 import burger from './modules/burger';
+import menuScroll from './modules/menuScroll';
 
 document.addEventListener('DOMContentLoaded', () => {
 'use stricti';
@@ -11,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // scrollUp();
 // calcScroll();
 
+menuScroll();
 burger();
 headerCarousel();
 });
