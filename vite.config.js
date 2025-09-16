@@ -15,6 +15,12 @@
 //       },
 //     },
 //   },
+// plugins: [
+//     createSvgIconsPlugin({
+//       iconDirs: [path.resolve(__dirname, 'src/icons')],
+//       symbolId: 'icon-[name]'
+//     })
+//   ]
 // })
 
 
@@ -22,6 +28,9 @@
 
 import { defineConfig } from 'vite';
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
+import { createSvgIconsPlugin } from 'vite-plugin-svg-icons';
+import path from 'path';
+
 
 export default defineConfig({
   plugins: [
@@ -31,5 +40,11 @@ export default defineConfig({
       png: { quality: 80 },
       webp: { quality: 80, lossless: false, convert: 'webp' },
     }),
+    createSvgIconsPlugin({
+      // встраивает svg-спрайт
+      iconDirs: [path.resolve(process.cwd(), 'src/icons')],
+      symbolId: 'icon-[name]'
+    })
   ],
+  
 });

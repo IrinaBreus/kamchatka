@@ -1,4 +1,6 @@
-import '/src/sass/style.scss'
+import '/src/sass/style.scss';
+
+import 'virtual:svg-icons-register';
 
 // import calcScroll from './modules/calcScroll';
 // import scrollUp from './modules/scrollUp';
@@ -15,4 +17,5 @@ document.addEventListener('DOMContentLoaded', () => {
 menuScroll();
 burger();
 headerCarousel();
+
 });
