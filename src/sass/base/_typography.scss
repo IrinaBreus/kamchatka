@@ -1,0 +1,51 @@
+.title {
+    font-family: var(--font-inter);
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 125%;
+    margin-bottom: 48px;
+    position: relative;
+    &::after,
+    &::before {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 36px;
+        height: 36px;
+        border-radius: 100%;
+        z-index: 3;
+    }
+    &::after {
+        background: transparent;
+        border: 3px solid var(--gray);
+        top: 10px;
+        left: -68px;
+    }
+    &::before {
+        width: 16px;
+        height: 16px;
+        background: var(--orange);
+        top: 22.5px;
+        left: -55.5px;
+    }
+    span {
+        font-family: var(--font-inter);
+        color: var(--orange);
+    }
+    &_white {
+        color: var(--white);
+    }
+}
+
+.txt {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    &_white {
+        color: #acacac;
+        span {
+            font-weight: 600;
+            color: var(--white);
+        }
+    }
+}

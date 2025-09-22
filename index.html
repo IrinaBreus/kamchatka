@@ -262,15 +262,12 @@
 				<img src="/src/img/second/text.png" alt="" class="start__img-txt">
 				<div class="start__img-plane">
 					<picture>
-						<!-- 1. Сначала указываем правила с media-запросами -->
 						<source media="(max-width: 576px)" srcset="/webp-images/second/plane-mob.webp" type="image/webp">
 						<source media="(max-width: 576px)" srcset="/src/img/second/plane-mob.png" type="image/png">
 						
-						<!-- 2. Затем общие правила (для всех остальных размеров) -->
 						<source srcset="/webp-images/second/plane.webp" type="image/webp">
 						<source srcset="/src/img/second/plane.png" type="image/png">
 						
-						<!-- 3. Фолбек для старых браузеров -->
 						<img src="/src/img/second/plane.png" alt="самолет" loading="lazy">
 					</picture>
 				</div>
@@ -282,6 +279,84 @@
 			</div>
 		</section>
 
+		<!-- Контейнер для дней и отрисовки линии пути -->
+		<div class="days">
+			<div class="container">
+				<div class="line-path">
+					<div class="line-path__wrapper">
+						<svg>
+							<use xlink:href="#icon-line"></use>
+						</svg>
+					</div>
+				</div>
+			</div>
+			<div class="one">
+				<div class="container">
+					<div class="one__txt-box">
+						<h2 class="title title_white one__title"><span>День 1.</span> Прибытие. Встреча в аэропорту и размещение</h2>
+						<p class="txt txt_white">
+							С высоты птичьего полета вы увидите знаменитые «домашние»  вулканы – Корякский, Авачинский и Козельский. У выхода в аэропорту <span>вас встретят с табличкой «ДРИМ ТУР»</span>.
+						</p><br>
+						<p class="txt txt_white">
+							<span>По пути в гостиницу сбор средств</span> с членов группы, инструктаж по программе этого дня (бассейн с термальной водой, шашлык, знакомство с группой, алкоголь, фейерверк не раньше 20:00). 
+						</p><br>
+						<p class="txt txt_white">
+							После выезд (вид транспорта зависит от величины группы) на базу отдыха в курортный <button class="btn-link btn-link_white" >поселок Паратунка</button>. 
+						</p><br>
+						<p class="txt txt_white">
+							<span>Вечером</span>, после прибытия на Камчатку всех участников (если рейсы разные), <span>общая встреча</span>, проверка снаряжения,  обсуждение программы завтрашнего дня.
+						</p>
+					</div>
+				</div>
+				<div class="slider right one__slider">
+					<div class="slider__wrapper">
+						<div class="slider__field">
+							<div class="slider__item">
+								<div class="slider__item-img">
+									<img src="/src/img/slide/slide4.jpg" alt="гора">
+								</div>
+								<div class="slider__img-txt">
+									<h6>Паратунка</h6>
+									<p>Поселок Паратунка известен лечебными термальными источниками.</p>
+								</div>
+							</div>
+							<div class="slider__item">
+								<div class="slider__item-img">
+									<img src="/src/img/slide/slide5.jpg" alt="гора">
+								</div>
+								<div class="slider__img-txt">
+									<h6>Памятник “Здесь начинается Россия”</h6>
+									<p>Гости Камчатки по традиции делают фото в начале и в конце путешествий.</p>
+								</div>
+							</div>
+							<div class="slider__item">
+								<div class="slider__item-img">
+									<img src="/src/img/slide/slide6.jpg" alt="гора">
+								</div>
+								<div class="slider__img-txt">
+									<h6>Вулкан Ключевской</h6>
+									<p>Самый высокий пик Камчатки – действующий Ключевской вулкан</p>
+								</div>
+							</div>
+						</div>
+						<div class="slider__arrows">
+							<button class="btn-cir btn-cir_wht carousel__btn-prev">
+								<svg class="icon">
+									<use xlink:href="#icon-prew-arrow"></use>
+								</svg>
+							</button>
+							
+							<button class="btn-cir btn-cir_wht carousel__btn-next">
+								<svg class="icon">
+									<use xlink:href="#icon-next-arrow"></use>
+								</svg>
+							</button>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
 		<!-- выбор для браузера между webp и jpg -->
     <!-- <picture>
 		 1. Сначала указываем правила с media-запросами

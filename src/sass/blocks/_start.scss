@@ -8,12 +8,6 @@
         }
     }
 
-    @media (max-width: 768px) {
-        .start {
-            background: url('/web-images/second/second-bg.webp')  center 366px / cover no-repeat;
-        }
-    }
-
     @media (max-width: 576px) {
         .start {
             background: url('/web-images/second/second-bg-mob.webp')  center 287px / cover no-repeat;
@@ -127,8 +121,6 @@
     }
 }
 
-
-
 @media (max-width: 1200px) {
     .start {
         &__title {
@@ -177,8 +169,6 @@
 
 @media (max-width: 768px) {
     .start {
-        padding: 64px 0 37px;
-        background: url('/src/img/second/second-bg.jpg')  center 366px / cover no-repeat;
         &__title,
         &__descr,
         &__txt {

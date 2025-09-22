@@ -1,10 +1,15 @@
 @use 'base/fonts';
 @use 'base/general';
 @use 'base/container';
+@use 'base/typography';
 
 @use 'ui/nav';
 @use 'ui/btns';
 
+@use 'libs/slider';
+
 @use 'blocks/footer';
 @use 'blocks/header';
 @use 'blocks/start';
+@use 'blocks/days';
+@use 'blocks/one';

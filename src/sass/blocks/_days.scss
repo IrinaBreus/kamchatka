@@ -1,0 +1,21 @@
+.days {
+    width: 100%;
+    min-height: max-content;
+}
+.line-path {
+    position: relative;
+    &__wrapper {
+        width: 754px;
+        height: 6889px;
+        z-index: 1;
+        top: 82px;
+        left: -70px;
+        position: absolute;
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+.f22 {
+}
