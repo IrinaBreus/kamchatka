@@ -17,5 +17,36 @@
         }
     }
 }
-.f22 {
+
+@media (max-width: 1440px) {
+    .days .container {
+        max-width: 1000px;
+}
+}
+@media (max-width: 1200px) {
+    .days .container {
+        max-width: 960px;
+    }
+    .line-path {
+        display: none;
+    }
+}
+
+@media (max-width: 992px) {
+    .days .container {
+        max-width: 720px;
+    }
+}
+
+@media (max-width: 768px) {
+    .days .container {
+        max-width: 540px;
+    }
+}
+
+@media (max-width: 576px) {
+   .days .container {
+        max-width: 100%;
+        padding: 0 10px;
+    }
 }

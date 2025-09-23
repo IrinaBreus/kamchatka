@@ -4,7 +4,6 @@
 
 .slider {
     height: 390px;
-    position: absolute;
     z-index: 10;
     &__wrapper {
         display: flex;
@@ -63,9 +62,55 @@
     &__arrows {
         display: flex;
         gap: 16px;
+        margin-bottom: 14px;
     }
 }
 .large {
     width: 320px;
     height: 320px;
+}
+
+.carousel__btn-prev,
+.carousel__btn-next {
+    transition: opacity 0.3s ease;
+    
+    &.disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        pointer-events: none; // На всякий случай
+    }
+}
+
+@media (max-width: 992px) {
+    .slider.right {
+        left: 10%;
+    }
+}
+
+@media (max-width: 576px) {
+    .slider.right {
+        left: 10px;
+    }
+    .slider {
+        height: 360px;
+        &__field {
+            gap: 20px;
+        }
+        &__item {
+            width: 282px;
+            height: 282px;
+            &:nth-child(1) {
+                width: 280px;
+                height: 280px;
+                .slider__img-txt {
+                    padding-bottom: 16px;
+                }
+            }
+        }
+    }
+    .large {
+        width: 280px;
+        height: 280px;
+    }
+
 }
