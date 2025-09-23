@@ -16,6 +16,7 @@
     &__slider {
         position: absolute;
         top: 136px;
+        left: 50%;
     }
 }
 
@@ -29,6 +30,7 @@
         &__slider {
             position: relative;
             top: 0;
+            left: 10%;
         }
     }
 }
@@ -36,5 +38,8 @@
 @media (max-width: 576px) {
     .one {
         padding: 50px 0 80px;
+        &__slider {
+            left: 10px;
+        }
     }
 }

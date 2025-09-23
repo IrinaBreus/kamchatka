@@ -35,6 +35,9 @@
     &_white {
         color: var(--white);
     }
+    &_dark {
+        color: var(--black);
+    }
 }
 
 .txt {
@@ -47,6 +50,9 @@
             font-weight: 600;
             color: var(--white);
         }
+    }
+    &_dark {
+        color: #313131;
     }
 }
 
