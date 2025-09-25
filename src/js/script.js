@@ -8,7 +8,6 @@ import headerCarousel from './modules/header-carousel';
 import burger from './modules/burger';
 import menuScroll from './modules/menuScroll';
 import miniCarousel from './modules/mini-carousels';
-import miniCarouselLeft from './modules/mini-carousels copy';
 
 document.addEventListener('DOMContentLoaded', () => {
 'use stricti';
@@ -18,10 +17,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 menuScroll();
 burger();
-headerCarousel();
-miniCarousel('.one__slider');
-// miniCarousel('.two__slider');
 
-miniCarouselLeft('.two__slider');
+headerCarousel();
+miniCarousel('.one__slider', 'right');
+miniCarousel('.two__slider', 'left');
 
 });
