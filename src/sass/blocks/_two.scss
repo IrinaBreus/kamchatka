@@ -24,11 +24,6 @@
             background: url('/web-images/two/two-bg.webp') top 17% right / 90% auto no-repeat;
         }
     }
-    // @media (max-width: 576px) {
-    //     .two {
-    //         background: none;
-    //     }
-    // }
 }
 .two {
     position: relative;
@@ -230,8 +225,11 @@
             line-height: 125%;
             margin-bottom: 32px;
         }
-        &__carts {
+        &__top-down-wrapper {
             padding: 40px 0;
+        }
+        &__carts {
+            padding: 0;
             grid-template-columns: 1fr;
             gap: 32px 0;
         }

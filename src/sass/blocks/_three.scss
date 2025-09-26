@@ -1,0 +1,81 @@
+// @supports (background: url('/web-images/second/second-bg.webp')) {
+//     .start {
+//         background: url('/web-images/second/second-bg.webp') center 448px / cover no-repeat;  
+//     }
+//     @media (max-width: 992px) {
+//         .start {
+//             background: url('/web-images/second/second-bg.webp')  center 366px / cover no-repeat;
+//         }
+//     }
+
+//     @media (max-width: 576px) {
+//         .start {
+//             background: url('/web-images/second/second-bg-mob.webp')  center 287px / cover no-repeat;
+//         }
+//     }
+// }
+.three {
+    padding-top: 80px;
+    height: 880px;
+    position: relative;
+    background: url('/src/img/three-bg.jpg') center bottom / 100% no-repeat;
+    &__slider {
+        position: absolute;
+        top: 130px;
+        right: 55%;
+    }
+    &__title,
+    &__text-block {
+        margin-left: 712px;
+    }
+}
+
+@media (max-width: 1440px) {
+    .three {
+        &__title {
+            margin-left: 712px;
+        }
+        &__text-block {
+            margin-left: 50%;
+        }
+    }
+    
+}
+
+@media (max-width: 1200px) {
+    .three {
+        &__title {
+            margin-left: 50%;
+        }
+    }
+}
+@media (max-width: 992px) {
+    .three {
+        padding: 64px 0;
+        height: max-content;
+        position: relative;
+        background: url('/src/img/three-bg.jpg') center bottom / 100% no-repeat;
+        &__slider {
+            position: relative;
+            top: 0;
+            right: 0;
+        }
+        &__title,
+        &__text-block {
+            margin-left: 0;
+        }
+        &__text-block {
+            margin-bottom: 48px;
+        }
+    }
+
+}
+
+@media (max-width: 768px) {
+   
+}
+
+@media (max-width: 576px) {
+    
+}
+

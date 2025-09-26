@@ -21,5 +21,6 @@ burger();
 headerCarousel();
 miniCarousel('.one__slider', 'right');
 miniCarousel('.two__slider', 'left');
+miniCarousel('.three__slider', 'left');
 
 });
