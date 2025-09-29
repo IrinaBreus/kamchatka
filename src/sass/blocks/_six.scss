@@ -1,0 +1,113 @@
+.six {
+    position: relative;
+    &__txt-box {
+        width: 45%;
+        p {
+            color: var(--white);
+        }
+    }
+    &__table-box {
+        padding-top: 38px;
+    }
+    &__table-title {
+        font-family: var(--font-mont);
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 140%;
+        color: var(--white);
+        margin-bottom: 20px;
+    }
+    &__table-mob {
+        display: none;
+    }
+    &__table {
+        width: 100%;
+        border-collapse: collapse;
+        border: none;
+        tr {
+            height: 80px;
+        }
+        td {
+            border: none;
+            border-bottom: 1px solid white;
+        }
+    }
+    &__table-service {
+        width: 223px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 150%;
+        color: var(--white);
+    }
+    &__table-descr {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 171%;
+        color: #bababa;
+        opacity: .7;
+    }
+    &__slider {
+        position: absolute;
+        top: 107px;
+        left: 50%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .six__table-service {
+        width: 170px;
+    }
+}
+
+@media (max-width: 992px) {
+    .six {
+        &__txt-box {
+            width: 100%;            p {
+                color: var(--white);
+            }
+        }
+        &__table-box {
+            padding-top: 48px;
+            margin-bottom: 48px;
+        }
+        &__table-title {
+            margin-bottom: 20px;
+        }
+        &__table-service {
+            width: 55%;
+        }
+        &__slider {
+            position: relative;
+            top: 0;
+            left: 10%;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .six {
+        &__table-box {
+            padding-top: 24px;
+        }
+        &__table-title {
+            margin-bottom: 16px;
+        }
+        &__table {
+            display: none;
+        }
+        &__table-mob {
+            display: block;
+        }
+        &__table-descr {
+            border-bottom: 1px solid var(--white);
+            padding-bottom: 16px;
+        }
+        &__table-service {
+            padding: 16px 0 8px;
+        }
+        &__slider {
+            left: 10px;
+        }
+    }
+}
+

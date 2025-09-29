@@ -1,0 +1,78 @@
+// @supports (background: url('/web-images/second/second-bg.webp')) {
+//     .start {
+//         background: url('/web-images/second/second-bg.webp') center 448px / cover no-repeat;  
+//     }
+//     @media (max-width: 992px) {
+//         .start {
+//             background: url('/web-images/second/second-bg.webp')  center 366px / cover no-repeat;
+//         }
+//     }
+
+//     @media (max-width: 576px) {
+//         .start {
+//             background: url('/web-images/second/second-bg-mob.webp')  center 287px / cover no-repeat;
+//         }
+//     }
+// }
+.five {
+    position: relative;
+    padding: 125px 0 240px;
+    &__slider {
+        position: absolute;
+        right: 55%;
+        top: 208px;
+    }
+    &__txt-box {
+        width: 38%;
+        margin-left: auto;
+    }
+    p, button {
+        color: var(--white);
+    }
+}
+
+@media (max-width: 1440px) {
+    .five {
+        padding-bottom: 190px;
+        z-index: 10;
+       &__slider {
+            position: absolute;
+            right: 55%;
+            top: 208px;
+        }
+        &__txt-box {
+            width: 46%;
+            margin-left: auto;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .five {
+        padding: 0 0 100px;
+        &__slider {
+            position: relative;
+            right: 0;
+            margin-left: 10%;
+            top: 0;
+        }
+        &__txt-box {
+            width: 100%;
+            margin-left: 0;
+            margin-bottom: 48px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .five {
+        padding: 0 0 118px;
+        &__slider {
+            margin-left: 10px;
+        }
+        &__txt-box {
+            margin-bottom: 24px;
+        }
+    }
+}
+

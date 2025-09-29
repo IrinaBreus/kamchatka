@@ -1,3 +1,8 @@
+@supports (background: url('/web-images/five-bg.webp')) {
+    .days-wrapper {
+        background: url('/web-images/five-bg.webp') bottom center / cover no-repeat;
+    }
+}
 .days {
     width: 100%;
     min-height: max-content;
@@ -18,11 +23,15 @@
         }
     }
 }
+.days-wrapper {
+    background: url('/src/img/five-bg.jpg') bottom center / cover no-repeat;
+    padding-bottom: 187px;
+}
 
 @media (max-width: 1440px) {
     .days .container {
         max-width: 1000px;
-}
+    }
 }
 @media (max-width: 1200px) {
     .days .container {
