@@ -202,9 +202,18 @@
             grid-area: 1 / 1 / 2 / 2;
         }
         &__bg {
+            grid-area: 3 / 1 / 4 / 2;
             display: block;
+            width: 100%;
+            height: max-content;
+            overflow: visible;
             margin-left: auto;
             margin-right: -10px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit:cover;
+            }
         }
         &__txt-right {
             grid-area: 4 / 1 / 5 / 2;

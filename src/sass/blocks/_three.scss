@@ -1,24 +1,19 @@
-// @supports (background: url('/web-images/second/second-bg.webp')) {
-//     .start {
-//         background: url('/web-images/second/second-bg.webp') center 448px / cover no-repeat;  
-//     }
-//     @media (max-width: 992px) {
-//         .start {
-//             background: url('/web-images/second/second-bg.webp')  center 366px / cover no-repeat;
-//         }
-//     }
-
-//     @media (max-width: 576px) {
-//         .start {
-//             background: url('/web-images/second/second-bg-mob.webp')  center 287px / cover no-repeat;
-//         }
-//     }
-// }
+@supports (background: url('/web-images/img/three-bg.webp')) {
+    .three {
+        background: url('/web-images/img/three-bg.webp') center bottom / 100% no-repeat;
+        }
+    @media (max-width: 992px) {
+        .three {
+            background: url('/web-images/img/three-bg.webp') center bottom / 100% no-repeat;
+        }
+    }
+}
 .three {
     padding-top: 80px;
     height: 880px;
     position: relative;
     background: url('/src/img/three-bg.jpg') center bottom / 100% no-repeat;
+    margin-bottom: -1px;
     &__slider {
         position: absolute;
         top: 130px;
@@ -59,6 +54,8 @@
             position: relative;
             top: 0;
             right: 0;
+            left: 0;
+            margin-left: 8%;
         }
         &__title,
         &__text-block {
@@ -70,12 +67,9 @@
     }
 
 }
-
-@media (max-width: 768px) {
-   
-}
-
 @media (max-width: 576px) {
-    
+    .three__slider {
+        margin-left: 10px;
+    }
 }
 

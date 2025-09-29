@@ -1,0 +1,110 @@
+.four {
+    background: black;
+    position: relative;
+    margin-bottom: -1px;
+    padding: 105px 0 97px;
+    &__img-eagle {
+        display: none;
+    }
+    &__img-gull {
+        position: absolute;
+        bottom: -86px;
+        right: 10%;
+        z-index: 10;
+        width: 373px;
+        height: 315px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+    &__txt-box {
+        width: 43%;
+    }
+    &__slider {
+        position: absolute;
+        top: 165px;
+        left: calc(50% + 16px);
+    }
+}
+
+@media (max-width: 1440px) {
+    .four {
+        &__txt-box {
+            width: 58%;
+        }
+        &__slider {
+            position: absolute;
+            top: 165px;
+            left: 60%;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .four {
+        padding: 60px 0 150px;
+        &__img-eagle {
+            display: block;
+            position: absolute;
+            right: 0;
+            top: -180px;
+            width: 450px;
+            height: 299px;
+            z-index: 10;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: none;
+            }
+        }
+        &__img-gull {
+            right: 5%;
+        }
+        &__txt-box {
+            width: 100%;
+        }
+        &__slider {
+            position: relative;
+            top: 48px;
+            left: 10%;
+        }
+    }
+}
+
+// @media (max-width: 768px) {
+//     .four {
+        
+//     }
+// }
+
+@media (max-width: 576px) {
+    .four {
+        padding: 112px 0 118px;
+        &__img-eagle {
+            top: -50px;
+            width: 248px;
+            height: 160px;
+            z-index: 10;
+            img {
+                object-fit: contain;
+            }
+        }
+        &__img-gull {
+            right:0px;
+            width: 329px;
+            height: 278px;
+            bottom: -46px;
+        }
+        &__txt-box {
+            width: 100%;
+        }
+        &__slider {
+            position: relative;
+            top: 24px;
+            left: 10px;
+        }
+    }
+}
+
