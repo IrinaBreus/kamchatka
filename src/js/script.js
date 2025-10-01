@@ -25,5 +25,6 @@ miniCarousel('.three__slider', 'left');
 miniCarousel('.four__slider', 'right');
 miniCarousel('.five__slider', 'left');
 miniCarousel('.six__slider', 'right');
+miniCarousel('.seven__slider', 'left');
 
 });
