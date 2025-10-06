@@ -27,6 +27,18 @@
         line-height: 140%;
         color: var(--white);
     }
+    &__txt {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 120%;
+        color: var(--black);
+    }
+    &__num {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 100%;
+        color: var(--black);
+    }
 }
 .table_dark {
     .table__row {
@@ -41,6 +53,21 @@
     }
 }
 
+@media (max-width: 992px) {
+    .table {
+        width: 100%;
+        &__row {
+            min-height: max-content;
+        }
+        &__txt {
+            font-size: 18px;
+        }
+        &__num {
+            font-size: 22px;
+        }
+    }
+}
+
 @media (max-width: 576px) {
     .table {
         width: 100%;
@@ -51,6 +78,9 @@
             padding: 16px 0;
         }
         &__service {
+            margin-bottom: 8px;
+        }
+        &__txt {
             margin-bottom: 8px;
         }
     }

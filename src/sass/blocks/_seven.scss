@@ -1,19 +1,32 @@
-// @supports (background: url('/web-images/second/second-bg.webp')) {
-//     .seven {
-//         background: url('/web-images/second/second-bg.webp') center 448px / cover no-repeat;  
-//     }
-//     @media (max-width: 992px) {
-//         .seven {
-//             background: url('/web-images/second/second-bg.webp')  center 366px / cover no-repeat;
-//         }
-//     }
+@supports (background: url('/web-images/seven-bg.webp')) {
+    .seven {
+        background: url('/src/img/seven-bg.jpg') top 200px right / 630px auto no-repeat;
+    }
 
-//     @media (max-width: 576px) {
-//         .seven {
-//             background: url('/web-images/second/second-bg-mob.webp')  center 287px / cover no-repeat;
-//         }
-//     }
-// }
+    @media (max-width: 1440px) {
+        .seven {
+            background: url('/src/img/seven-bg.jpg') top 240px right / 580px auto no-repeat;
+        }
+    }
+    @media (max-width: 1200px) {
+        .seven {
+            background: url('/src/img/seven-bg.jpg') top 210px right / 480px auto no-repeat;
+        }
+    }
+
+    @media (max-width: 992px) {
+        .seven {
+            background: url('/src/img/seven-bg.jpg') top 260px right / 420px auto no-repeat;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .seven {
+            background: url('/src/img/seven-bg.jpg') top 360px right / 340px auto no-repeat;
+        }
+    }
+}
+
 .seven {
     position: relative;
     padding-top: 116px;
@@ -43,6 +56,9 @@
             grid-area: 5 / 3 / 6 / 4;
             margin-bottom: 44px;
         }
+    }
+    &__bg-mob {
+        display: none;
     }
     &__table-box {
         grid-area: 6 / 3 / 7 / 4;
@@ -78,9 +94,6 @@
             &_4 {
                 margin-bottom: 24px;
             }
-        }
-        &__bg-mob {
-            display: none;
         }
     }
 }
@@ -208,8 +221,7 @@
             grid-area: 7 / 1 / 8 / 2;
         }
         &__slider {
-            left: 10px;
+            left: 10px ;
         }
     }
 }
-

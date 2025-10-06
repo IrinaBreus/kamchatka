@@ -1,19 +1,31 @@
-// @supports (background: url('/web-images/second/second-bg.webp')) {
-//     .eight {
-//         background: url('/web-images/second/second-bg.webp') center 448px / cover no-repeat;  
-//     }
-//     @media (max-width: 992px) {
-//         .eight {
-//             background: url('/web-images/second/second-bg.webp')  center 366px / cover no-repeat;
-//         }
-//     }
+@supports (background: url('/web-images/eight-bg.webp')) {
+    .days-inner {
+        background: url('/web-images/eight-bg.webp') bottom center / 100vw 45% no-repeat;
+    }
+    
+    @media (max-width: 1440px) {
+        .days-inner {
+            background: url('/web-images/eight-bg.webp') bottom center / auto 45% no-repeat;
+        }
+    }
+    
+    @media (max-width: 992px) {
+        .days-inner {
+            background: url('/web-images/eight-bg.webp') bottom center / auto 32% no-repeat;
+        }
+    }
 
-//     @media (max-width: 576px) {
-//         .eight {
-//             background: url('/web-images/second/second-bg-mob.webp')  center 287px / cover no-repeat;
-//         }
-//     }
-// }
+    @media (max-width: 576px) {
+        .days-inner {
+            background: url('/web-images/eight-mob.webp') bottom center / 100% 40% no-repeat;
+        }
+    }
+    @media (max-width: 475px) {
+        .days-inner {
+            background: url('/web-images/eight-mob.webp') bottom center / 100% 23% no-repeat;
+        }
+    }
+}
 .days-inner {
     background: url('/src/img/eight-bg.jpg') bottom center / 100vw 45% no-repeat;
     margin-bottom: -1px;
@@ -28,16 +40,16 @@
 
 @media (max-width: 1440px) {
     .eight {
-    padding: 290px 0 160px 106px;
-    &__content {
-        width: 50%;
-        margin: 0 auto;
+        padding: 290px 0 160px 106px;
+        &__content {
+            width: 50%;
+            margin: 0 auto;
+        }
     }
     .days-inner {
-    background: url('/src/img/eight-bg.jpg') bottom center / auto 45% no-repeat;
-    margin-bottom: -1px;
-}
-}
+        background: url('/src/img/eight-bg.jpg') bottom center / auto 45% no-repeat;
+        margin-bottom: -1px;
+    }
 }
 @media (max-width: 1200px) {
     .eight {

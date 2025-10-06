@@ -10,6 +10,8 @@
 }
 .line-path {
     position: relative;
+    z-index: 1;
+    pointer-events: none;
     &__wrapper {
         width: 754px;
         height: 6889px;

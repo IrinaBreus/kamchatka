@@ -43,7 +43,17 @@ export default defineConfig({
     createSvgIconsPlugin({
       // встраивает svg-спрайт
       iconDirs: [path.resolve(process.cwd(), 'src/icons')],
-      symbolId: 'icon-[name]'
+      symbolId: 'icon-[name]',
+      svgoOptions: {
+        plugins: [
+          {
+            name: 'removeAttrs',
+            params: {
+              attrs: '(fill|stroke|style)'  // удаляет fill, stroke и инлайновые стили
+            }
+          }
+        ]
+      }
     })
   ],
   
