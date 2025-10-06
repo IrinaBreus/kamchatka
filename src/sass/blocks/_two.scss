@@ -30,6 +30,8 @@
     z-index: 1;
     padding-top: 123px;
     background: url('/src/img/two/two-bg.png') top 1% right / 65% auto no-repeat;
+    margin-bottom: -1px;
+    margin-top: -1px;
     &__top-wrapper {
         display: grid;
         grid-template: repeat(3, max-content) / 6fr 2fr 1fr 4fr;
