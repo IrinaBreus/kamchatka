@@ -8,6 +8,7 @@ import headerCarousel from './modules/header-carousel';
 import burger from './modules/burger';
 import menuScroll from './modules/menuScroll';
 import miniCarousel from './modules/mini-carousels';
+import form from './modules/form';
 
 document.addEventListener('DOMContentLoaded', () => {
 'use stricti';
@@ -17,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 menuScroll();
 burger();
+form('.application__form-main');
 
 headerCarousel();
 miniCarousel('.one__slider', 'right');

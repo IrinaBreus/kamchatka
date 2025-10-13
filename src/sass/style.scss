@@ -6,6 +6,7 @@
 @use 'ui/nav';
 @use 'ui/btns';
 @use 'ui/table';
+@use 'ui/forms';
 
 @use 'libs/slider';
 
@@ -23,3 +24,4 @@
 @use 'blocks/eight';
 @use 'blocks/price';
 @use 'blocks/about';
+@use 'blocks/application';

@@ -28,13 +28,14 @@ ul, ol[class] {
     list-style: none;
 }
 
-// для вставки формата webp, если браузер его поддерживает
-// .hero {
-//   background-image: url('bg.jpg');  <!-- Fallback -->
-// }
+/* Для браузеров на движке WebKit (Chrome, Safari, Edge) */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 
-// @supports (background-image: url('bg.webp')) {
-//   .hero {
-//     background-image: url('bg.webp');  <!-- Оптимизированная версия -->
-//   }
-// }
+/* Для Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
