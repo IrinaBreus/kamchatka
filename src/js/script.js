@@ -13,14 +13,19 @@ import form from './modules/form';
 document.addEventListener('DOMContentLoaded', () => {
 'use stricti';
 
+// получение текущего года
+const year = document.querySelector('.footer__date span');
+year.innerHTML = new Date().getFullYear();
+
 // scrollUp();
 // calcScroll();
 
-menuScroll();
+menuScroll(); //изменение вида меню при скроле
 burger();
 form('.application__form-main');
 
-headerCarousel();
+headerCarousel(); //слайдер для header
+// небольшие слайдеры по сайту
 miniCarousel('.one__slider', 'right');
 miniCarousel('.two__slider', 'left');
 miniCarousel('.three__slider', 'left');

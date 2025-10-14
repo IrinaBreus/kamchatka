@@ -3,6 +3,7 @@
 }
 .application {
     padding: 96px 0 72px;
+    overflow: hidden;
     background: url('/src/img/form-bg.jpg') bottom center / 100% 65% no-repeat;
     &__wrapper {
         display: grid;
