@@ -1,6 +1,7 @@
 const scrollUp = () => {
-    const links = document.querySelectorAll('[href^="#"]'),
-           up = document.querySelector('.up');
+    const links = document.querySelectorAll('[href^="#"]');
+    // const links = document.querySelectorAll('[href^="#"]'),
+    //        up = document.querySelector('.up');
 
     links.forEach(link => {
         link.addEventListener('click', function(e) {
@@ -23,25 +24,25 @@ const scrollUp = () => {
         })
     });
 
-    up.addEventListener('click', function(e) {
-        e.preventDefault();
+    // up.addEventListener('click', function(e) {
+    //     e.preventDefault();
         
-        window.scrollTo({
-            left: 0,
-            top: 0,
-            behavior: "smooth"
-        });
-    })
+    //     window.scrollTo({
+    //         left: 0,
+    //         top: 0,
+    //         behavior: "smooth"
+    //     });
+    // })
 
-    window.addEventListener('scroll', () => {
-        if (document.documentElement.scrollTop > 1000) {
-            up.style.cssText = `opacity: 1;
-                                cursor: pointer;`
-        } else {
-            up.style.cssText = `opacity: 0;
-                                cursor: none;`
-        }
-    })
+    // window.addEventListener('scroll', () => {
+    //     if (document.documentElement.scrollTop > 1000) {
+    //         up.style.cssText = `opacity: 1;
+    //                             cursor: pointer;`
+    //     } else {
+    //         up.style.cssText = `opacity: 0;
+    //                             cursor: none;`
+    //     }
+    // })
 }
 
 export default scrollUp;

@@ -1,38 +1,72 @@
-const form = (formSelect) => {
-    const form = document.querySelector(formSelect),
-          btnPlus = form.querySelector('.form-main__symbol_plus'),
-          btnMinus = form.querySelector('.form-main__symbol_minus'),
-          inptNumOfMan = form.elements.numberOfMan;
+import { inputCounter } from './formComponents/inputCounter.js';
+import { initValidation } from './formComponents/validation.js';
+import { initPhoneMask } from './formComponents/phoneMask.js';
 
-    // вывод кол-ва человек
-    let numOfMan = inptNumOfMan.value || 1;
-    const MAX_VALUE = 40; // или любое другое максимальное значение
+const form = (formSelector) => {
+    const form = document.querySelector(formSelector);
+    form.setAttribute('novalidate', 'true');
 
-    const updateMinusButton = () => {
-        btnMinus.disabled = numOfMan === 1;
-        btnPlus.disabled = numOfMan === MAX_VALUE;
-    };
-    inptNumOfMan.addEventListener('input', (e) => {
-        numOfMan = e.target.value || 1;
-        updateMinusButton();
-    });
+    inputCounter(form);
+    initPhoneMask(form);
 
-    btnPlus.addEventListener('click', (e) => {
+    form.addEventListener('submit', async (e) => {
         e.preventDefault();
-        if (numOfMan < MAX_VALUE) {
-            numOfMan++;
-            inptNumOfMan.value = numOfMan;
-            updateMinusButton();
+
+        if (initValidation(form)) {
+            const formData = collectFormData(form);
+            
+            // Фейковый fetch для консоли
+            await fakeFetch(formData, form, formSelector);
         }
     })
-    btnMinus.addEventListener('click', (e) => {
-        e.preventDefault();
-        if (numOfMan > 1) {
-            numOfMan--;
-            inptNumOfMan.value = numOfMan;
-            updateMinusButton();
+}
+
+// Фейковый fetch
+const fakeFetch = (data, formElement, formSelector) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log('📨 FETCH DATA:', data);
+            console.log('🎯 Форма:', data.firstName ? 'Основная' : 'Модальная');
+            resolve({ status: 200, message: 'Success' });
+            // reject(new Error('Сервер сломался!'));
+        }, 500);
+    })
+    .then(result => {
+        showMessage('ok');
+        return result;
+    })
+    .catch(error => {
+        showMessage('error');
+        throw error;
+    })
+    .finally(() => {
+        formElement.reset();
+        if (formSelector.includes('modal')) {
+            closeModal();
         }
     });
-}
+};
+
+// Сбор данных формы
+const collectFormData = (form) => {
+    const formData = new FormData(form);
+    return Object.fromEntries(formData);
+};
+
+// Закрытие модалки (добавь свою логику)
+const closeModal = () => {
+    document.querySelector('.modal').classList.remove('active');
+    document.body.style.overflow = '';
+    document.body.style.marginRight = '0px';
+};
+
+const showMessage = (type) => {
+    const message = document.querySelector(`.modal-success.${type}`);
+    message.classList.add('active');
+    setTimeout(() => {
+        message.classList.remove('active');
+    }, 2000);
+};
+
 
 export default form;

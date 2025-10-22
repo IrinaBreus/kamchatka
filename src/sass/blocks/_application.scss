@@ -1,5 +1,35 @@
-@supports (background: url('/web-images/second/second-bg.webp')) {
-    
+@supports (background: url('/web-images/form-bg.webp')) {
+    .application {
+        background: url('/web-images/form-bg.webp') bottom center / 100% 65% no-repeat;
+    }
+
+    @media (max-width: 1700px) {
+        .application {
+            background: url('/web-images/form-bg.webp') bottom center / 100% 60% no-repeat;
+        }
+    }
+    @media (max-width: 1440px) {
+        .application {
+            background: url('/web-images/form-bg.webp') bottom center / auto 60% no-repeat;
+        }
+    }
+    @media (max-width: 992px) {
+        .application {
+            background: url('/web-images/form-bg.webp') bottom left 30% / auto 65% no-repeat;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .application {
+            background: url('/web-images/form-bg.webp') bottom left 40% / auto 60% no-repeat;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .application {
+            background: url('/web-images/form-bg.webp') bottom left 28% / auto 55% no-repeat;
+        }
+    }
 }
 .application {
     padding: 96px 0 72px;

@@ -94,10 +94,10 @@
                     1px 1px 3px var(--black);
     }
     &__btns {
-        display: flex;
-        gap: 18px;
-        align-items: center;
         a {
+            display: flex;
+            gap: 18px;
+            align-items: center;
             font-weight: 400;
             font-size: 18px;
             line-height: 133%;
